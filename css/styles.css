@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+h1,h2,h3,h4{
+    text-wrap: balance;
+}
+
+h1{
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+}
+
+p{
+    text-wrap: pretty;
+}
+
+li{
+    list-style: none;
+
+}
+
+a{
+    color: inherit;
+}
+
+header{
+    background-color: #151516;
+}
+
+textarea{
+    resize: none;
+}
+/*================= NAVBAR ===============*/
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 2rem;
+    margin: auto;
+}
+
+.logo{
+    width: 95px;
+}
+
+.nav__list{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__list a{
+    font-weight: 600;
+}
+
+.open-menu, .close-menu {
+    display: none;
+}
+
+.link{
+    padding: 8px 16px;
+    transition: 0.2s ;
+}
+
+.link:hover{
+    color: #E3A72F;
+}
+
+@media screen and (max-width: 550px){
+    body{
+        overflow-x: hidden; 
+    }
+
+    .open-menu, .close-menu { 
+        display: block;
+        color: #fff;
+        border: none;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+
+    .close-menu {
+        background-color: transparent;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+
+    .close-menu:hover {
+        background: #cf9829;
+        transition: 0.5s;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        background-color: #E3A72F;
+        padding: 2rem;
+        padding-left: 4rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+        
+    }
+
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__list{
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+
+/* ===================== MAIN ======================== */
+
+/* ================= principal ======================== */
+.main__titleContainer{
+    background-image: url("../assets/images/taller3-d.jpg");
+    height: 450px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main__title{
+    font-size: 3.5rem;
+    font-weight: 00;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.main__subtitle{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.main__button-contact{
+    background-color: #E3A72F;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.main__button-contact:hover{
+    background-color: #f6b738;
+}
+/* ================ modal ================= */
+
+dialog{
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 350px ;
+    text-align: center;
+}
+
+dialog h2{
+    margin: 35px 0 25px 0;
+}
+
+.close-modal{
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.close-modal{
+    background-color: transparent;
+    border-radius: 20%;
+}
+
+.close-modal:hover{
+    background-color: #ec1e1e;
+    color: #fff;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.767);
+}  
+
+.text-input{
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.send-form{
+    background-color: #cf9829;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+    margin: 25px;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.send-form:hover{
+    background-color: #E3A72F;
+    color: #fff;
+}
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container{
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.input-container input{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1312px){
+
+    .main__titleContainer{
+        padding: 30px;
+        height: 100vh;
+    }
+
+    .main__title{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+
+    .main__titleContainer{
+        height: 100vh;
+    }
+}
+
+.m-width{
+    max-width: 1280px;
+    margin: auto;
+}
+
+/* ===================== services ======================= */
+.services{
+    background-color: #fff;
+}
+.main__services{
+    color: #000;
+    display: flex;
+    padding: 4.5rem 2rem;
+    justify-content: center;
+}
+
+.title{
+    font-size: 2rem;
+    color: #E3A72F;
+    margin-bottom: 0.5em;
+}
+.icon{
+    background-color: #E3A72F;
+    width: 120px;
+    padding: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.main__services-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.main__services-icons i{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.main__services-icons p {
+    font-weight: 700;
+    color: #E3A72F;
+    margin-top: 1rem;
+}
+.icon-container{
+    text-align: center;
+    margin: 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+}
+
+
+
+.text{
+    max-width: 400px;
+}
+
+.icon:hover{
+    background-color: #575757;
+}
+
+@media screen and (max-width: 550px){
+    .main__services{
+        padding-top: 4rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main__services-textContent{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .main__services-title{
+        margin-bottom: 1rem;
+    }
+
+    .icon-container{
+        margin-bottom: 2rem;
+    }
+}
+
+/* ====================== about section ========================= */
+.about{
+    background-color: #FFF;
+}
+
+.about-container{
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.about__img{
+    background-image: url(../assets/images/taller1.jpg);
+    width: 1000px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+    -webkit-box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+    -moz-box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+    border-radius: 10px;
+}
+
+span{
+    color: #cf9829;
+}
+
+.about__textContent{
+    margin-left: 100px ;
+}
+
+@media screen and (max-width: 992px){
+    .about{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-container{
+        justify-content: center;
+    }
+
+    .about__img{
+        max-width: 300px;
+        height: 200px;  
+    }
+
+    .about__textContent{
+        max-width: 800px;
+        margin-left: 0 ;
+        margin-top: 40px;
+    }
+
+    .about-container{
+        flex-wrap: wrap;
+    }
+
+}
+
+/* ========================== carrousell ========================= */
+
+
+
+.slider{
+    max-width: 60vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.slide{
+    width: 200px;
+    margin: 20px;
+}
+
+.slide img{
+    width: 100%;
+}
+
+.slide-track{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+@keyframes scroll{
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100%{
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+/* ====================== G-MAP ================ */
+
+.iframe{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.iframe div{
+    text-align: center;
+    padding: 80px;
+    width: 100%;
+}
+
+iframe{
+    margin-top: 20px;
+    width: 800px;
+    height: 400px;
+    box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+-webkit-box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+-moz-box-shadow: 4px 14px 80px 2px rgba(148,148,148,0.75);
+border-radius: 10px;
+}
+
+
+@media screen and (max-width: 992px){
+   iframe{
+        width: 500px;
+        height: 250px;
+   }
+
+}
+
+@media screen and (max-width: 550px){
+    iframe{
+         width: 200px;
+         height: 150px;
+    }
+ 
+ }
+ 
+
+
+/* 
+======================== contact ================== */
+
+.contact{
+    background-image: url(../assets/images/taller2-d.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact__container{
+   text-align: center;
+   padding: 80px 40px;
+}
+
+.h1-title{
+    font-size: 3.5rem;
+}
+
+.contact__container p{
+    margin: 25px 0;
+}
+
+@media screen and (max-width: 992px){
+    .h1-title{
+        font-size: 2rem;
+    }
+ 
+ }
+/* 
+ ===================footer============= */
+
+ footer{
+    background: #000;
+ }
+ .footer__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: auto;
+ }
+
+.footer__content{
+    margin: 40px;
+ }
+
+
+.title__container{
+    margin-bottom: 10px;
+}
+
+.social_icon{
+    display: flex;
+    align-items: center;
+}
+
+.social_icon i {
+    margin-right: 15px;
+}
+
+.copyright{
+    text-align: center;
+    padding: 30px;
+    background-color: #3d3d3d3a;
+    color: #575757;
+}
+
